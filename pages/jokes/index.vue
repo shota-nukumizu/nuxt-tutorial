@@ -1,12 +1,12 @@
 <template>
     <div>
-       <Joke v-for="joke in jokes" :key="joke.id" :id="joke.id" :joke="joke.joke" />
+       <Jokes v-for="joke in jokes" :key="joke.id" :id="joke.id" :joke="joke.joke" />
     </div>
 </template>
 
 <script>
 import axios from 'axios'
-import Jokes from '../../components/Jokes.vue'
+import Jokes from '../../components/Jokes'
 
 export default {
     components: {
