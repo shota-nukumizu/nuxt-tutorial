@@ -1,13 +1,17 @@
 <template>
     <div>
-       <h1>This is Joke Page.</h1> 
+       <Joke v-for="joke in jokes" :key="joke.id" :id="joke.id" :joke="joke.joke" />
     </div>
 </template>
 
 <script>
 import axios from 'axios'
+import Jokes from '../../components/Jokes.vue'
 
 export default {
+    components: {
+        Jokes
+    },
     data() {
         return {
             jokes: []
